@@ -6,7 +6,7 @@ level: 2
 
 import string
 
-def caesar_encryption(s, shift):
+def caesar_encryption1(s, shift):
     lc = list(string.ascii_lowercase)
     uc = list(string.ascii_uppercase)
     plain_string = list(s)
@@ -21,7 +21,18 @@ def caesar_encryption(s, shift):
         encrypted_string.append(new_char)
     res = ''.join(encrypted_string)
     return res
+
+def caesar_encryption2(s, shift):
+    lc = string.ascii_lowercase
+    uc = string.ascii_uppercase
+    lc_shifted = lc[shift:] + lc[0:shift]
+    uc_shifted = uc[shift:] + uc[0:shift]
+    return s.translate(s.maketrans(lc + uc, lc_shifted + uc_shifted))
     
 s = "Caesar's code or Caesar shift, is one of the simplest #encryption techniques!."
-print(caesar_encryption(s, 3))
+print(s)
+print()
+print(caesar_encryption1(s, 3))
+print()
+print(caesar_encryption2(s, 3))
     
