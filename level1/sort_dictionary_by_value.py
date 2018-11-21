@@ -1,3 +1,8 @@
+'''
+Write program to sort dictionary by value
+
+level: 1
+'''
 d = {'f':4, 'a':9, 'e':5, 'd':1, 'b':7}
 print(d)
 
