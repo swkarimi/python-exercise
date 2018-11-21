@@ -18,6 +18,6 @@ c.update(b)
 
 for key in list(c.keys()):
     if key % 3 == 0:
-        del c[key]
+        del c[key] # c.pop(key)
 
 print(sum(c.values()))
